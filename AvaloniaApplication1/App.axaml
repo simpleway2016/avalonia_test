@@ -13,8 +13,6 @@
   
     <Application.Styles>
         <FluentTheme />
-		<StyleInclude Source="avares://Avalonia.Controls.ColorPicker/Themes/Fluent/Fluent.xaml" />
-		<StyleInclude Source="avares://Avalonia.Controls.DataGrid/Themes/Fluent.xaml"/>
 
 		<!--:is(Button)表示所有Button派生类也有效，如果只写Button，那么派生类是不会有效的-->
 		<Style Selector=":is(Button)">
@@ -718,8 +716,6 @@
 
 
 		<Style Selector="Window.dialog">
-			<Setter Property="ExtendClientAreaToDecorationsHint" Value="False"/>
-			<Setter Property="WindowDecorations" Value="None"/>
 			<Setter Property="Background">
 				<Setter.Value>
 					<LinearGradientBrush StartPoint="0 0" EndPoint="0% 100%">
