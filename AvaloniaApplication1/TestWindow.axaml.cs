@@ -23,7 +23,7 @@ public partial class TestWindow : Window
     {
         while(true)
         {
-            await Task.Delay(20);
+            await Task.Delay(1);
             txtTime.Text = DateTime.Now.ToString("hh:mm:ss.fff");
             txt2.Text = DateTime.Now.ToString("hh:mm:ss.fff");
             playPointer.Margin = new Thickness(playPointer.Margin.Left + 1, playPointer.Margin.Top, 0, 0);
