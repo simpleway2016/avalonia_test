@@ -476,6 +476,10 @@
 							<StackPanel Name="panel">
 								<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
 								<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
+									<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
+								<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
+									<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
+								<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
 							</StackPanel>
 						</ScrollViewer>
 
