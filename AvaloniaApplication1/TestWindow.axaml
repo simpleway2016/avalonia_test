@@ -6,7 +6,8 @@
 		xmlns:vc="using:AvaloniaApplication1.Views"
 		mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 		x:Class="AvaloniaApplication1.TestWindow"
-		Title="TestWindow">
+		WindowState="Maximized"	
+		Title="Use Avalonia 12.0.4">
 	<Grid>
 		<Grid x:Name="root" RowDefinitions="auto *" Background="#000000" Focusable="True">
 			<!--工作区-->
