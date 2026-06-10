@@ -1,6 +1,5 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using AvaloniaApplication1.ViewModels;
 using System;
 using System.Diagnostics.CodeAnalysis;
 
@@ -32,7 +31,7 @@ namespace AvaloniaApplication1
 
         public bool Match(object? data)
         {
-            return data is ViewModelBase;
+            return false;
         }
     }
 }
