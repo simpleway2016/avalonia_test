@@ -9,233 +9,34 @@
 		WindowState="Maximized"	
 		Title="Use Avalonia 12.0.4">
 	<Grid>
-		<Grid x:Name="root" RowDefinitions="auto *" Background="#000000" Focusable="True">
-			<!--工作区-->
-			<!--头部-->
+		<Grid RowDefinitions="auto *" Background="#000000" Focusable="True">
 			<Border Background="#232325" DockPanel.Dock="Top">
 				<Grid>
-					<Button Classes="mixer_select" Flyout="{StaticResource mainMenu}" Content="主菜单" FontSize="13" Background="Transparent" BorderThickness="0"
-							HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10 0 0 5"/>
+					<StackPanel  HorizontalAlignment="Left" Orientation="Horizontal">
 
-					<!--中间区域-->
-					<StackPanel x:Name="centerTopContainer" Spacing="8" HorizontalAlignment="Left" Orientation="Horizontal">
-						<!--走带按钮-->
-						<Border x:Name="playControlBtnArea" Classes="play_control_area">
-							<StackPanel Orientation="Horizontal">
-								<Button
-								Classes="control_btn" Padding="10 5">
-									<Button.ContentTemplate>
-										<DataTemplate>
 
-										</DataTemplate>
-									</Button.ContentTemplate>
-								</Button>
-								<!--播放-->
-								<ToggleButton
-								Classes="control_btn" Margin="2 0 0 0" Padding="10 5">
-									<ToggleButton.Styles>
-										<FluentTheme>
-											<FluentTheme.Palettes>
-												<ColorPaletteResources x:Key="Dark" Accent="#019d32" />
-											</FluentTheme.Palettes>
-										</FluentTheme>
-									</ToggleButton.Styles>
-									<ToggleButton.ContentTemplate>
-										<DataTemplate>
-										</DataTemplate>
-									</ToggleButton.ContentTemplate>
-								</ToggleButton>
-
-								<ToggleButton
-								Classes="control_btn" Margin="2 0 0 0" Padding="10 5">
-									<ToggleButton.Styles>
-										<FluentTheme>
-											<FluentTheme.Palettes>
-												<ColorPaletteResources x:Key="Dark" Accent="#019d32" />
-											</FluentTheme.Palettes>
-										</FluentTheme>
-									</ToggleButton.Styles>
-									<ToggleButton.ContentTemplate>
-										<DataTemplate>
-
-										</DataTemplate>
-									</ToggleButton.ContentTemplate>
-								</ToggleButton>
-
-								<!--快进-->
-								<Button
-								Classes="control_btn" Padding="10 5">
-									<Button.ContentTemplate>
-										<DataTemplate>
-
-										</DataTemplate>
-									</Button.ContentTemplate>
-								</Button>
-								<Button
-								Classes="control_btn" Padding="10 5">
-									<Button.ContentTemplate>
-										<DataTemplate>
-
-										</DataTemplate>
-									</Button.ContentTemplate>
-								</Button>
+						<TextBlock Name="txt2" FontSize="17" Width="230" Height="60" Margin="20 20" />
 
 
 
-								<!--录音-->
-								<ToggleButton Classes="control_btn black_record" Margin="2 0 0 0" Padding="10 5">
-									<ToggleButton.ContentTemplate>
-										<DataTemplate>
-											<Border CornerRadius="999" Width="13.5" Height="13.5" BorderThickness="0">
-												<Border.Background>
-													<Binding Path="Foreground" RelativeSource="{RelativeSource Mode=FindAncestor, AncestorType=ToggleButton}" />
-												</Border.Background>
-											</Border>
-										</DataTemplate>
-									</ToggleButton.ContentTemplate>
-								</ToggleButton>
-								<!--循环播放-->
-								<ToggleButton ToolTip.Tip="循环播放"  Classes="control_btn" Margin="2 0 0 0" Padding="10 5">
-									<ToggleButton.Styles>
-										<FluentTheme>
-											<FluentTheme.Palettes>
-												<ColorPaletteResources x:Key="Dark" Accent="#b99300" />
-											</FluentTheme.Palettes>
-										</FluentTheme>
-									</ToggleButton.Styles>
-									<ToggleButton.ContentTemplate>
-										<DataTemplate>
-
-										</DataTemplate>
-									</ToggleButton.ContentTemplate>
-								</ToggleButton>
-							</StackPanel>
-						</Border>
-						<!--液晶-->
-						<TextBlock Name="txt2" FontSize="17" Width="230" Height="60" Margin="10 0" />
-
-
-
-						<!--节拍机-->
-						<Border Classes="play_control_area">
-							<StackPanel Orientation="Horizontal">
-
-
-							</StackPanel>
-						</Border>
-
-						<!--关闭当前工程-->
-						<Border Classes="play_control_area">
-							<StackPanel Orientation="Horizontal">
-								<Button ToolTip.Tip="关闭当前工程" Padding="10 10"
-										Classes="control_btn">
-									<PathIcon Data="M20,3H5A2,2 0 0,0 3,5V11H7V9L11,12L7,15V13H3V19A2,2 0 0,0 5,21H20A2,2 0 0,0 22,19V5A2,2 0 0,0 20,3M17,17H13V15H17V17M20,13H13V11H20V13M20,9H13V7H20V9M3,13H0V11H3V13Z"/>
-								</Button>
-
-
-							</StackPanel>
-						</Border>
 
 					</StackPanel>
 				</Grid>
 			</Border>
 
 
-			<Grid x:Name="contentGrid" Grid.Row="1" RowDefinitions="auto * 0 0" ColumnDefinitions="* 3 250">
+			<Grid Grid.Row="1" RowDefinitions="auto * 0 0" ColumnDefinitions="* 3 250">
 
-				<!--工具区-->
 				<Border Grid.Row="0" Grid.Column="0" Background="#1c1c1e" Height="50" BorderBrush="#252527" BorderThickness="0 0 0 1" DockPanel.Dock="Top">
 					<Grid>
-						<StackPanel Spacing="0" Orientation="Horizontal" Margin="10 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center">
-							<!--布局切换-->
-							<ToggleButton ToolTip.Tip="只显示调音台"
 
-										  Classes="vstlist_toolbar_btn" CornerRadius="6 0 0 6" Padding="13 8">
-								<ToggleButton.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</ToggleButton.Styles>
-								<ToggleButton.ContentTemplate>
-									<DataTemplate>
-										<PathIcon Width="14" Height="14" Data="M7 3H5V9H7V3M19 3H17V13H19V3M3 13H5V21H7V13H9V11H3V13M15 7H13V3H11V7H9V9H15V7M11 21H13V11H11V21M15 15V17H17V21H19V17H21V15H15Z"/>
-									</DataTemplate>
-								</ToggleButton.ContentTemplate>
-							</ToggleButton>
-							<ToggleButton  ToolTip.Tip="只显示波形音轨"
-
-										   Classes="vstlist_toolbar_btn" CornerRadius="0" Padding="13 8">
-								<ToggleButton.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</ToggleButton.Styles>
-								<ToggleButton.ContentTemplate>
-									<DataTemplate>
-										<PathIcon Width="14" Height="14" Data="M16.5,21C13.5,21 12.31,16.76 11.05,12.28C10.14,9.04 9,5 7.5,5C4.11,5 4,11.93 4,12H2C2,11.63 2.06,3 7.5,3C10.5,3 11.71,7.25 12.97,11.74C13.83,14.8 15,19 16.5,19C19.94,19 20.03,12.07 20.03,12H22.03C22.03,12.37 21.97,21 16.5,21Z"/>
-									</DataTemplate>
-								</ToggleButton.ContentTemplate>
-							</ToggleButton>
-							<ToggleButton  ToolTip.Tip="同时显示调音台+波形音轨"
-
-										   Classes="vstlist_toolbar_btn" CornerRadius="0 6 6 0" Padding="13 8">
-								<ToggleButton.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</ToggleButton.Styles>
-								<ToggleButton.ContentTemplate>
-									<DataTemplate>
-										<PathIcon Width="14" Height="14" Data="M6,11H10V9H14V11H18V4H6V11M18,13H6V20H18V13M6,2H18A2,2 0 0,1 20,4V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V4A2,2 0 0,1 6,2Z"/>
-									</DataTemplate>
-								</ToggleButton.ContentTemplate>
-							</ToggleButton>
-
-							<!--undo redo-->
-							<Button Classes="toolbar_btn"
-
-									Margin="10 0 0 0" CornerRadius="6 0 0 6" Padding="13 8">
-								<Button.ContentTemplate>
-									<DataTemplate>
-
-									</DataTemplate>
-								</Button.ContentTemplate>
-							</Button>
-							<Button Classes="toolbar_btn"
-
-									CornerRadius="0 6 6 0" Padding="13 8">
-								<Button.ContentTemplate>
-									<DataTemplate>
-
-									</DataTemplate>
-								</Button.ContentTemplate>
-							</Button>
-
-
-						</StackPanel>
-
-						<!--波形工具栏-->
 						<StackPanel Spacing="0"
 									Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
 
 
-							<!--移动波形-->
 							<ToggleButton
-							Classes="toolbar_btn" CornerRadius="6 0 0 6" Padding="13 8">
-								<ToggleButton.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</ToggleButton.Styles>
+							 CornerRadius="6 0 0 6" Padding="13 8">
 								<ToggleButton.ContentTemplate>
 									<DataTemplate>
 										<PathIcon Width="14" Height="14" Data="M13,6V11H18V7.75L22.25,12L18,16.25V13H13V18H16.25L12,22.25L7.75,18H11V13H6V16.25L1.75,12L6,7.75V11H11V6H7.75L12,1.75L16.25,6H13Z"/>
@@ -243,16 +44,8 @@
 								</ToggleButton.ContentTemplate>
 							</ToggleButton>
 
-							<!--贴着拍子-->
 							<ToggleButton
-							Classes="toolbar_btn" CornerRadius="0" Padding="13 8">
-								<ToggleButton.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</ToggleButton.Styles>
+							 CornerRadius="0" Padding="13 8">
 								<ToggleButton.ContentTemplate>
 									<DataTemplate>
 										<PathIcon Width="14" Height="14" Data="M11.45,2V5.55L15,3.77L11.45,2M10.45,8L8,10.46L11.75,11.71L10.45,8M2,11.45L3.77,15L5.55,11.45H2M10,2H2V10C2.57,10.17 3.17,10.25 3.77,10.25C7.35,10.26 10.26,7.35 10.27,3.75C10.26,3.16 10.17,2.57 10,2M17,22V16H14L19,7V13H22L17,22Z"/>
@@ -261,14 +54,8 @@
 							</ToggleButton>
 
 							<ToggleButton
-							Classes="toolbar_btn" CornerRadius="0" Padding="13 8">
-								<ToggleButton.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</ToggleButton.Styles>
+							 CornerRadius="0" Padding="13 8">
+								
 								<ToggleButton.ContentTemplate>
 									<DataTemplate>
 										<PathIcon Width="14" Height="14" Data="M3,14L3.5,14.07L8.07,9.5C7.89,8.85 8.06,8.11 8.59,7.59C9.37,6.8 10.63,6.8 11.41,7.59C11.94,8.11 12.11,8.85 11.93,9.5L14.5,12.07L15,12C15.18,12 15.35,12 15.5,12.07L19.07,8.5C19,8.35 19,8.18 19,8A2,2 0 0,1 21,6A2,2 0 0,1 23,8A2,2 0 0,1 21,10C20.82,10 20.65,10 20.5,9.93L16.93,13.5C17,13.65 17,13.82 17,14A2,2 0 0,1 15,16A2,2 0 0,1 13,14L13.07,13.5L10.5,10.93C10.18,11 9.82,11 9.5,10.93L4.93,15.5L5,16A2,2 0 0,1 3,18A2,2 0 0,1 1,16A2,2 0 0,1 3,14Z"/>
@@ -276,14 +63,8 @@
 								</ToggleButton.ContentTemplate>
 							</ToggleButton>
 							<Button
-							Classes="toolbar_btn" CornerRadius="0 6 6 0" Padding="13 8">
-								<Button.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</Button.Styles>
+							 CornerRadius="0 6 6 0" Padding="13 8">
+							
 								<Button.ContentTemplate>
 									<DataTemplate>
 										<PathIcon Width="14" Height="14" Data="M11 11V7H13V11H11M13 1V5H11V1H13M11 17V13H13V17H11M9 20H6V4H9V2H6C4.89 2 4 2.9 4 4V20C4 21.11 4.89 22 6 22H9V20M15 3V8H18V20H15V22H18C19.11 22 20 21.11 20 20V8L15 3M13 19H11V23H13V19Z"/>
@@ -294,14 +75,8 @@
 
 
 							<Button
-							Classes="toolbar_btn" CornerRadius="6 0 0 6" Padding="13 8">
-								<Button.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</Button.Styles>
+							 CornerRadius="6 0 0 6" Padding="13 8">
+								
 								<Button.ContentTemplate>
 									<DataTemplate>
 										<Viewbox Width="12" Height="12">
@@ -311,14 +86,8 @@
 								</Button.ContentTemplate>
 							</Button>
 							<Button
-							Classes="toolbar_btn" CornerRadius="0" Padding="13 8">
-								<Button.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</Button.Styles>
+							 CornerRadius="0" Padding="13 8">
+							
 								<Button.ContentTemplate>
 									<DataTemplate>
 										<Viewbox Width="12" Height="12">
@@ -328,14 +97,8 @@
 								</Button.ContentTemplate>
 							</Button>
 							<Button
-							Classes="toolbar_btn" CornerRadius="0 6 6 0" Padding="13 8">
-								<Button.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</Button.Styles>
+							 CornerRadius="0 6 6 0" Padding="13 8">
+								
 								<Button.ContentTemplate>
 									<DataTemplate>
 										<Viewbox Width="12" Height="12">
@@ -345,16 +108,10 @@
 								</Button.ContentTemplate>
 							</Button>
 
-							<Button ToolTip.Tip="删除所有波形" Margin="5 0 0 0"
+							<Button Margin="5 0 0 0"
 
-									Classes="toolbar_btn" CornerRadius="6 0 0 6" Padding="13 8">
-								<Button.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</Button.Styles>
+									 CornerRadius="6 0 0 6" Padding="13 8">
+								
 								<Button.ContentTemplate>
 									<DataTemplate>
 										<PathIcon Width="14" Height="14" Data="M15,16H19V18H15V16M15,8H22V10H15V8M15,12H21V14H15V12M11,10V18H5V10H11M13,8H3V18A2,2 0 0,0 5,20H11A2,2 0 0,0 13,18V8M14,5H11L10,4H6L5,5H2V7H14V5Z"/>
@@ -362,14 +119,8 @@
 								</Button.ContentTemplate>
 							</Button>
 							<Button
-							Classes="toolbar_btn" CornerRadius="0" Padding="13 8">
-								<Button.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</Button.Styles>
+							 CornerRadius="0" Padding="13 8">
+								
 								<Button.RenderTransform>
 									<RotateTransform Angle="180"/>
 								</Button.RenderTransform>
@@ -380,35 +131,14 @@
 								</Button.ContentTemplate>
 							</Button>
 							<Button
-							Classes="toolbar_btn" CornerRadius="0 6 6 0" Padding="13 8">
-								<Button.Styles>
-									<FluentTheme>
-										<FluentTheme.Palettes>
-											<ColorPaletteResources x:Key="Dark" Accent="#47484d" />
-										</FluentTheme.Palettes>
-									</FluentTheme>
-								</Button.Styles>
+							 CornerRadius="0 6 6 0" Padding="13 8">
+							
 								<Button.ContentTemplate>
 									<DataTemplate>
 										<PathIcon Width="14" Height="14" Data="M22 11H17V6H14V11H10V3H7V11H1.8V13H7V21H10V13H14V18H17V13H22V11Z"/>
 									</DataTemplate>
 								</Button.ContentTemplate>
 							</Button>
-						</StackPanel>
-
-						<StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-							<StackPanel  Orientation="Vertical" VerticalAlignment="Center" Spacing="3">
-								<TextBlock Grid.Column="2" FontSize="8"
-										   Background="Transparent"
-										   Text="" Margin="0 3 9 0"
-										   HorizontalAlignment="Right" VerticalAlignment="Top"/>
-								<TextBlock Grid.Column="2" FontSize="9"  Margin="0 0 9 4"
-										   HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
-
-							</StackPanel>
-
-
-
 						</StackPanel>
 
 					</Grid>
@@ -418,55 +148,7 @@
 				<Grid ColumnDefinitions="auto *" RowDefinitions="auto *" Grid.Column="0" Grid.Row="1" Background="#151517" ClipToBounds="True">
 
 
-
-					<!--刻度区-->
-					<Border Grid.Column="1" Grid.Row="0" Background="#1c1c1e" Height="50" BorderBrush="#252527" BorderThickness="0 0 0 1">
-						<Grid ColumnDefinitions="300 *">
-							<Grid Grid.Column="0" >
-								<StackPanel Orientation="Horizontal" Margin="20 0 0 0" HorizontalAlignment="Left" VerticalAlignment="Center">
-									<Button ToolTip.Tip="添加音轨" Background="Transparent" >
-										<Button.ContentTemplate>
-											<DataTemplate>
-												<Grid Width="14" Height="14">
-													<PathIcon Width="12" Height="12" Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
-												</Grid>
-											</DataTemplate>
-										</Button.ContentTemplate>
-									</Button>
-
-									<Button ToolTip.Tip="添加多个音轨"
-
-											Background="Transparent">
-										<Button.ContentTemplate>
-											<DataTemplate>
-												<PathIcon Width="14" Height="14" Data="M18 11H15V14H13V11H10V9H13V6H15V9H18M20 4V16H8V4H20M20 2H8C6.9 2 6 2.9 6 4V16C6 17.11 6.9 18 8 18H20C21.11 18 22 17.11 22 16V4C22 2.9 21.11 2 20 2M4 6H2V20C2 21.11 2.9 22 4 22H18V20H4V6Z"/>
-											</DataTemplate>
-										</Button.ContentTemplate>
-									</Button>
-								</StackPanel>
-
-								<StackPanel Orientation="Horizontal" Margin="0 0 10 0" HorizontalAlignment="Right" VerticalAlignment="Center">
-									<Button ToolTip.Tip="混音导出" Background="Transparent"
-											>
-										<Button.ContentTemplate>
-											<DataTemplate>
-												<PathIcon Width="17" Height="17" Data="M23,12L19,8V11H10V13H19V16M1,18V6C1,4.89 1.9,4 3,4H15A2,2 0 0,1 17,6V9H15V6H3V18H15V15H17V18A2,2 0 0,1 15,20H3A2,2 0 0,1 1,18Z"/>
-											</DataTemplate>
-										</Button.ContentTemplate>
-									</Button>
-								</StackPanel>
-							</Grid>
-
-
-						</Grid>
-					</Border>
-
-
-					<!--如果一开始不是“只显示波形音轨”的布局，当切换到“只显示波形音轨”的布局，
-					trackScrollViewer会出现类似固定高度的现象，导致trackGrid实际高度比trackScrollViewer更小，
-					trackScrollViewer不会出现滚动条，解决方法是在trackGrid_SizeChanged中更改trackScrollViewer高度-->
-					<Grid x:Name="trackGrid" Grid.Column="1" Grid.Row="1" >
-						<!--波形音轨列表-->
+					<Grid Grid.Column="1" Grid.Row="1" >
 						<ScrollViewer x:Name="trackScrollViewer" VerticalAlignment="Top"
 									  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
 							<StackPanel Name="panel">
@@ -479,122 +161,16 @@
 							</StackPanel>
 						</ScrollViewer>
 
-						<Rectangle x:Name="rectOverTracks" Opacity="0.3" IsHitTestVisible="False" IsVisible="False" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
 
-						<!--播放指针-->
 						<vc:PlayPointer x:Name="playPointer"
 										IsHitTestVisible="False"
 										HorizontalAlignment="Left" Width="21" Margin="290 -29 0 0"/>
-						<ScrollBar AllowAutoHide="False" x:Name="trackHorizontalScrollbar" Orientation="Horizontal" Margin="300 0 0 0" VerticalAlignment="Bottom"/>
-
+						
 					</Grid>
 
 				</Grid>
 
-				<GridSplitter Grid.Column="0" Grid.Row="2" MinHeight="0" Background="Black"
-							  ResizeDirection="Rows"/>
-
-				<!--调音台区-->
-				<!--调音台音轨列表-->
-				<Grid Grid.Column="0" Grid.Row="3"
-					  ColumnDefinitions="auto *"
-					  ClipToBounds="True" Background="#151517">
-					<StackPanel Orientation="Vertical" Margin="6 6 7 0" Spacing="5">
-						<Button HorizontalAlignment="Left" VerticalAlignment="Top"
-								Flyout="{StaticResource mainMenu}"
-								ToolTip.Tip="主菜单" Background="#2a2a2a">
-							<PathIcon Width="8" Height="8" Data="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"/>
-						</Button>
-
-						<Button HorizontalAlignment="Left" VerticalAlignment="Top"
-								ToolTip.Tip="添加音轨" Background="#2a2a2a"
-								>
-							<PathIcon Width="8" Height="8" Data="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
-						</Button>
-
-						<Button HorizontalAlignment="Left" VerticalAlignment="Top"
-								ToolTip.Tip="添加多个音轨" Background="#2a2a2a"
-								>
-							<PathIcon Width="8" Height="8" Data="M18 11H15V14H13V11H10V9H13V6H15V9H18M20 4V16H8V4H20M20 2H8C6.9 2 6 2.9 6 4V16C6 17.11 6.9 18 8 18H20C21.11 18 22 17.11 22 16V4C22 2.9 21.11 2 20 2M4 6H2V20C2 21.11 2.9 22 4 22H18V20H4V6Z"/>
-						</Button>
-
-						<Button HorizontalAlignment="Left" VerticalAlignment="Top"
-								>
-							<PathIcon Foreground="#f5bc1e" Width="12" Height="12" Data="M9,3A4,4 0 0,1 13,7H5A4,4 0 0,1 9,3M11.84,9.82L11,18H10V19A2,2 0 0,0 12,21A2,2 0 0,0 14,19V14A4,4 0 0,1 18,10H20L19,11L20,12H18A2,2 0 0,0 16,14V19A4,4 0 0,1 12,23A4,4 0 0,1 8,19V18H7L6.16,9.82C5.67,9.32 5.31,8.7 5.13,8H12.87C12.69,8.7 12.33,9.32 11.84,9.82M9,11A1,1 0 0,0 8,12A1,1 0 0,0 9,13A1,1 0 0,0 10,12A1,1 0 0,0 9,11Z"/>
-						</Button>
-
-						<Button HorizontalAlignment="Left" VerticalAlignment="Top"
-								>
-							<PathIcon Foreground="#f5bc1e" Width="8" Height="8" Data="M19,2H5A2,2 0 0,0 3,4V18A2,2 0 0,0 5,20H9L12,23L15,20H19A2,2 0 0,0 21,18V4A2,2 0 0,0 19,2M13.88,12.88L12,17L10.12,12.88L6,11L10.12,9.12L12,5L13.88,9.12L18,11"/>
-						</Button>
-
-						<Button HorizontalAlignment="Left" VerticalAlignment="Top"
-								>
-							<PathIcon Foreground="#f5bc1e" Width="8" Height="8" Data="M20,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6A2,2 0 0,0 20,4M7.76,16.24L6.35,17.65C4.78,16.1 4,14.05 4,12C4,9.95 4.78,7.9 6.34,6.34L7.75,7.75C6.59,8.93 6,10.46 6,12C6,13.54 6.59,15.07 7.76,16.24M12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16M17.66,17.66L16.25,16.25C17.41,15.07 18,13.54 18,12C18,10.46 17.41,8.93 16.24,7.76L17.65,6.35C19.22,7.9 20,9.95 20,12C20,14.05 19.22,16.1 17.66,17.66M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z"/>
-						</Button>
-
-
-						<Button
-						Margin="0 20 0 0"
-						HorizontalAlignment="Left" VerticalAlignment="Top"
-						ToolTip.Tip="解开调音台锁定" Background="#2a2a2a">
-							<PathIcon Width="8" Height="8" Data="M12,17A2,2 0 0,0 14,15C14,13.89 13.1,13 12,13A2,2 0 0,0 10,15A2,2 0 0,0 12,17M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6A2,2 0 0,1 4,20V10C4,8.89 4.9,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z"/>
-						</Button>
-						<Button
-						Margin="0 20 0 0"
-						HorizontalAlignment="Left" VerticalAlignment="Top"
-						ToolTip.Tip="锁定调音台" Background="#2a2a2a"
-						>
-							<PathIcon Width="8" Height="8" Data="M18 1C15.24 1 13 3.24 13 6V8H4C2.9 8 2 8.89 2 10V20C2 21.11 2.9 22 4 22H16C17.11 22 18 21.11 18 20V10C18 8.9 17.11 8 16 8H15V6C15 4.34 16.34 3 18 3C19.66 3 21 4.34 21 6V8H23V6C23 3.24 20.76 1 18 1M10 13C11.1 13 12 13.89 12 15C12 16.11 11.11 17 10 17C8.9 17 8 16.11 8 15C8 13.9 8.9 13 10 13Z"/>
-						</Button>
-
-						<Button HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="0 10 0 0"
-								ToolTip.Tip="隐藏输入输出项" Background="#2a2a2a"
-								>
-							<PathIcon Foreground="#f5bc1e" Width="8" Height="8"
-									  Data="M15,2C16.94,2 18.59,2.7 19.95,4.05C21.3,5.41 22,7.06 22,9C22,10.56 21.5,11.96 20.58,13.2C19.64,14.43 18.44,15.27 16.97,15.7L17,15.38V15C17,12.81 16.23,10.93 14.65,9.35C13.07,7.77 11.19,7 9,7H8.63L8.3,7.03C8.73,5.56 9.57,4.36 10.8,3.42C12.04,2.5 13.44,2 15,2M9,8A7,7 0 0,1 16,15A7,7 0 0,1 9,22A7,7 0 0,1 2,15A7,7 0 0,1 9,8M9,10A5,5 0 0,0 4,15A5,5 0 0,0 9,20A5,5 0 0,0 14,15A5,5 0 0,0 9,10Z"/>
-						</Button>
-
-						<Button HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 10 0 0"
-								ToolTip.Tip="显示输入输出项" Background="#2a2a2a"
-								>
-							<PathIcon Width="8" Height="8" Data="M15,2C16.94,2 18.59,2.7 19.95,4.05C21.3,5.41 22,7.06 22,9C22,10.56 21.5,11.96 20.58,13.2C19.64,14.43 18.44,15.27 16.97,15.7L17,15.38V15C17,12.81 16.23,10.93 14.65,9.35C13.07,7.77 11.19,7 9,7H8.63L8.3,7.03C8.73,5.56 9.57,4.36 10.8,3.42C12.04,2.5 13.44,2 15,2M9,8A7,7 0 0,1 16,15A7,7 0 0,1 9,22A7,7 0 0,1 2,15A7,7 0 0,1 9,8M9,10A5,5 0 0,0 4,15A5,5 0 0,0 9,20A5,5 0 0,0 14,15A5,5 0 0,0 9,10Z"/>
-						</Button>
-
-						<Button HorizontalAlignment="Left"  VerticalAlignment="Top"
-								ToolTip.Tip="隐藏插件" Background="#2a2a2a"
-								>
-							<PathIcon Foreground="#f5bc1e" Width="8" Height="8" Data="M13 12C13 12.55 12.55 13 12 13S11 12.55 11 12 11.45 11 12 11 13 11.45 13 12M10 12L7 9V11H3V13H7V15L10 12M14 12L17 15V13H21V11H17V9L14 12M20.5 3.5L19.42 4.58C21.32 6.5 22.5 9.11 22.5 12C22.5 14.9 21.32 17.5 19.42 19.42L20.5 20.5C22.66 18.31 24 15.31 24 12S22.66 5.69 20.5 3.5M5.69 9C6.81 6.64 9.22 5 12 5S17.19 6.64 18.32 9H20.5C19.24 5.5 15.92 3 12 3S4.76 5.5 3.5 9H5.69M4.58 4.58L3.5 3.5C1.34 5.69 0 8.69 0 12S1.34 18.31 3.5 20.5L4.58 19.42C2.68 17.5 1.5 14.9 1.5 12C1.5 9.11 2.68 6.5 4.58 4.58M18.32 15C17.19 17.36 14.79 19 12 19S6.81 17.36 5.69 15H3.5C4.76 18.5 8.08 21 12 21S19.24 18.5 20.5 15H18.32Z"/>
-						</Button>
-
-						<Button HorizontalAlignment="Left"  VerticalAlignment="Top"
-								ToolTip.Tip="显示插件" Background="#2a2a2a"
-								>
-							<PathIcon Width="8" Height="8" Data="M13 12C13 12.55 12.55 13 12 13S11 12.55 11 12 11.45 11 12 11 13 11.45 13 12M10 12L7 9V11H3V13H7V15L10 12M14 12L17 15V13H21V11H17V9L14 12M20.5 3.5L19.42 4.58C21.32 6.5 22.5 9.11 22.5 12C22.5 14.9 21.32 17.5 19.42 19.42L20.5 20.5C22.66 18.31 24 15.31 24 12S22.66 5.69 20.5 3.5M5.69 9C6.81 6.64 9.22 5 12 5S17.19 6.64 18.32 9H20.5C19.24 5.5 15.92 3 12 3S4.76 5.5 3.5 9H5.69M4.58 4.58L3.5 3.5C1.34 5.69 0 8.69 0 12S1.34 18.31 3.5 20.5L4.58 19.42C2.68 17.5 1.5 14.9 1.5 12C1.5 9.11 2.68 6.5 4.58 4.58M18.32 15C17.19 17.36 14.79 19 12 19S6.81 17.36 5.69 15H3.5C4.76 18.5 8.08 21 12 21S19.24 18.5 20.5 15H18.32Z"/>
-						</Button>
-
-						<Button HorizontalAlignment="Left"  VerticalAlignment="Top"
-								ToolTip.Tip="隐藏声像" Background="#2a2a2a"
-								>
-							<PathIcon Foreground="#f5bc1e" Width="8" Height="8" Data="M8.5,12.5L11,15.5L14.5,11L19,17H5M23,18V6A2,2 0 0,0 21,4H3A2,2 0 0,0 1,6V18A2,2 0 0,0 3,20H21A2,2 0 0,0 23,18Z"/>
-						</Button>
-
-						<Button HorizontalAlignment="Left"  VerticalAlignment="Top"
-								ToolTip.Tip="显示声像" Background="#2a2a2a"
-								>
-							<PathIcon Width="8" Height="8" Data="M8.5,12.5L11,15.5L14.5,11L19,17H5M23,18V6A2,2 0 0,0 21,4H3A2,2 0 0,0 1,6V18A2,2 0 0,0 3,20H21A2,2 0 0,0 23,18Z"/>
-						</Button>
-					</StackPanel>
-					<Rectangle Width="1" Fill="#252527" HorizontalAlignment="Right"
-							   VerticalAlignment="Stretch"/>
-
-
-
-				</Grid>
-
-				<GridSplitter Grid.Column="1" Grid.RowSpan="4" MinWidth="0" Background="Black" ResizeDirection="Columns"/>
-
-
+				
 
 			</Grid>
 
@@ -602,11 +178,5 @@
 		</Grid>
 
 
-		<StackPanel 
-		Background="#88ffffff"
-		Grid.RowSpan="999" Grid.ColumnSpan="9999" HorizontalAlignment="Center" VerticalAlignment="Bottom">
-			<Button Name="btnRun" Click="btnRun_Click">Run</Button>
-			<TextBlock Width="130" Name="txtTime"/>
-		</StackPanel>
 	</Grid>
 </Window>
