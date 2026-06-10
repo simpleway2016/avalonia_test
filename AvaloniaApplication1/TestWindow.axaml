@@ -6,171 +6,148 @@
 		xmlns:vc="using:AvaloniaApplication1.Views"
 		mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 		x:Class="AvaloniaApplication1.TestWindow"
-		WindowState="Maximized"	
+		WindowState="Maximized"
 		Title="Use Avalonia 12.0.4">
 	<Grid>
 		<Grid RowDefinitions="auto *" Background="#000000" Focusable="True">
-			<Border Background="#232325" DockPanel.Dock="Top">
-				<Grid>
-					<StackPanel  HorizontalAlignment="Left" Orientation="Horizontal">
-
-
-						<TextBlock Name="txt2" FontSize="17" Width="230" Height="60" Margin="20 20" />
-
-
-
-
-					</StackPanel>
-				</Grid>
-			</Border>
+			<TextBlock Name="txt2" FontSize="17" Width="230" Height="60" Margin="20 20" />
 
 
 			<Grid Grid.Row="1" RowDefinitions="auto * 0 0" ColumnDefinitions="* 3 250">
 
-				<Border Grid.Row="0" Grid.Column="0" Background="#1c1c1e" Height="50" BorderBrush="#252527" BorderThickness="0 0 0 1" DockPanel.Dock="Top">
-					<Grid>
-
-						<StackPanel Spacing="0"
-									Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<StackPanel Spacing="0"
+							Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
 
 
 
-							<ToggleButton
-							 CornerRadius="6 0 0 6" Padding="13 8">
-								<ToggleButton.ContentTemplate>
-									<DataTemplate>
-										<PathIcon Width="14" Height="14" Data="M13,6V11H18V7.75L22.25,12L18,16.25V13H13V18H16.25L12,22.25L7.75,18H11V13H6V16.25L1.75,12L6,7.75V11H11V6H7.75L12,1.75L16.25,6H13Z"/>
-									</DataTemplate>
-								</ToggleButton.ContentTemplate>
-							</ToggleButton>
+					<ToggleButton
+					CornerRadius="6 0 0 6" Padding="13 8">
+						<ToggleButton.ContentTemplate>
+							<DataTemplate>
+								<PathIcon Width="14" Height="14" Data="M13,6V11H18V7.75L22.25,12L18,16.25V13H13V18H16.25L12,22.25L7.75,18H11V13H6V16.25L1.75,12L6,7.75V11H11V6H7.75L12,1.75L16.25,6H13Z"/>
+							</DataTemplate>
+						</ToggleButton.ContentTemplate>
+					</ToggleButton>
 
-							<ToggleButton
-							 CornerRadius="0" Padding="13 8">
-								<ToggleButton.ContentTemplate>
-									<DataTemplate>
-										<PathIcon Width="14" Height="14" Data="M11.45,2V5.55L15,3.77L11.45,2M10.45,8L8,10.46L11.75,11.71L10.45,8M2,11.45L3.77,15L5.55,11.45H2M10,2H2V10C2.57,10.17 3.17,10.25 3.77,10.25C7.35,10.26 10.26,7.35 10.27,3.75C10.26,3.16 10.17,2.57 10,2M17,22V16H14L19,7V13H22L17,22Z"/>
-									</DataTemplate>
-								</ToggleButton.ContentTemplate>
-							</ToggleButton>
+					<ToggleButton
+					CornerRadius="0" Padding="13 8">
+						<ToggleButton.ContentTemplate>
+							<DataTemplate>
+								<PathIcon Width="14" Height="14" Data="M11.45,2V5.55L15,3.77L11.45,2M10.45,8L8,10.46L11.75,11.71L10.45,8M2,11.45L3.77,15L5.55,11.45H2M10,2H2V10C2.57,10.17 3.17,10.25 3.77,10.25C7.35,10.26 10.26,7.35 10.27,3.75C10.26,3.16 10.17,2.57 10,2M17,22V16H14L19,7V13H22L17,22Z"/>
+							</DataTemplate>
+						</ToggleButton.ContentTemplate>
+					</ToggleButton>
 
-							<ToggleButton
-							 CornerRadius="0" Padding="13 8">
-								
-								<ToggleButton.ContentTemplate>
-									<DataTemplate>
-										<PathIcon Width="14" Height="14" Data="M3,14L3.5,14.07L8.07,9.5C7.89,8.85 8.06,8.11 8.59,7.59C9.37,6.8 10.63,6.8 11.41,7.59C11.94,8.11 12.11,8.85 11.93,9.5L14.5,12.07L15,12C15.18,12 15.35,12 15.5,12.07L19.07,8.5C19,8.35 19,8.18 19,8A2,2 0 0,1 21,6A2,2 0 0,1 23,8A2,2 0 0,1 21,10C20.82,10 20.65,10 20.5,9.93L16.93,13.5C17,13.65 17,13.82 17,14A2,2 0 0,1 15,16A2,2 0 0,1 13,14L13.07,13.5L10.5,10.93C10.18,11 9.82,11 9.5,10.93L4.93,15.5L5,16A2,2 0 0,1 3,18A2,2 0 0,1 1,16A2,2 0 0,1 3,14Z"/>
-									</DataTemplate>
-								</ToggleButton.ContentTemplate>
-							</ToggleButton>
-							<Button
-							 CornerRadius="0 6 6 0" Padding="13 8">
-							
-								<Button.ContentTemplate>
-									<DataTemplate>
-										<PathIcon Width="14" Height="14" Data="M11 11V7H13V11H11M13 1V5H11V1H13M11 17V13H13V17H11M9 20H6V4H9V2H6C4.89 2 4 2.9 4 4V20C4 21.11 4.89 22 6 22H9V20M15 3V8H18V20H15V22H18C19.11 22 20 21.11 20 20V8L15 3M13 19H11V23H13V19Z"/>
-									</DataTemplate>
-								</Button.ContentTemplate>
-							</Button>
+					<ToggleButton
+					CornerRadius="0" Padding="13 8">
+
+						<ToggleButton.ContentTemplate>
+							<DataTemplate>
+								<PathIcon Width="14" Height="14" Data="M3,14L3.5,14.07L8.07,9.5C7.89,8.85 8.06,8.11 8.59,7.59C9.37,6.8 10.63,6.8 11.41,7.59C11.94,8.11 12.11,8.85 11.93,9.5L14.5,12.07L15,12C15.18,12 15.35,12 15.5,12.07L19.07,8.5C19,8.35 19,8.18 19,8A2,2 0 0,1 21,6A2,2 0 0,1 23,8A2,2 0 0,1 21,10C20.82,10 20.65,10 20.5,9.93L16.93,13.5C17,13.65 17,13.82 17,14A2,2 0 0,1 15,16A2,2 0 0,1 13,14L13.07,13.5L10.5,10.93C10.18,11 9.82,11 9.5,10.93L4.93,15.5L5,16A2,2 0 0,1 3,18A2,2 0 0,1 1,16A2,2 0 0,1 3,14Z"/>
+							</DataTemplate>
+						</ToggleButton.ContentTemplate>
+					</ToggleButton>
+					<Button
+					CornerRadius="0 6 6 0" Padding="13 8">
+
+						<Button.ContentTemplate>
+							<DataTemplate>
+								<PathIcon Width="14" Height="14" Data="M11 11V7H13V11H11M13 1V5H11V1H13M11 17V13H13V17H11M9 20H6V4H9V2H6C4.89 2 4 2.9 4 4V20C4 21.11 4.89 22 6 22H9V20M15 3V8H18V20H15V22H18C19.11 22 20 21.11 20 20V8L15 3M13 19H11V23H13V19Z"/>
+							</DataTemplate>
+						</Button.ContentTemplate>
+					</Button>
 
 
 
-							<Button
-							 CornerRadius="6 0 0 6" Padding="13 8">
-								
-								<Button.ContentTemplate>
-									<DataTemplate>
-										<Viewbox Width="12" Height="12">
-											<Path Data="M 70,0 L 50,0 Q 15,0 0,50" Stroke="White" StrokeThickness="6"/>
-										</Viewbox>
-									</DataTemplate>
-								</Button.ContentTemplate>
-							</Button>
-							<Button
-							 CornerRadius="0" Padding="13 8">
-							
-								<Button.ContentTemplate>
-									<DataTemplate>
-										<Viewbox Width="12" Height="12">
-											<Path Data="M 70,0 L 50,0 Q 15,0 0,50 M 0,0 L 20,0 Q 55,0 70,50" Stroke="White" StrokeThickness="6"/>
-										</Viewbox>
-									</DataTemplate>
-								</Button.ContentTemplate>
-							</Button>
-							<Button
-							 CornerRadius="0 6 6 0" Padding="13 8">
-								
-								<Button.ContentTemplate>
-									<DataTemplate>
-										<Viewbox Width="12" Height="12">
-											<Path Data="M 0,0 L 20,0 Q 55,0 70,50" Stroke="White" StrokeThickness="6"/>
-										</Viewbox>
-									</DataTemplate>
-								</Button.ContentTemplate>
-							</Button>
+					<Button
+					CornerRadius="6 0 0 6" Padding="13 8">
 
-							<Button Margin="5 0 0 0"
+						<Button.ContentTemplate>
+							<DataTemplate>
+								<Viewbox Width="12" Height="12">
+									<Path Data="M 70,0 L 50,0 Q 15,0 0,50" Stroke="White" StrokeThickness="6"/>
+								</Viewbox>
+							</DataTemplate>
+						</Button.ContentTemplate>
+					</Button>
+					<Button
+					CornerRadius="0" Padding="13 8">
 
-									 CornerRadius="6 0 0 6" Padding="13 8">
-								
-								<Button.ContentTemplate>
-									<DataTemplate>
-										<PathIcon Width="14" Height="14" Data="M15,16H19V18H15V16M15,8H22V10H15V8M15,12H21V14H15V12M11,10V18H5V10H11M13,8H3V18A2,2 0 0,0 5,20H11A2,2 0 0,0 13,18V8M14,5H11L10,4H6L5,5H2V7H14V5Z"/>
-									</DataTemplate>
-								</Button.ContentTemplate>
-							</Button>
-							<Button
-							 CornerRadius="0" Padding="13 8">
-								
-								<Button.RenderTransform>
-									<RotateTransform Angle="180"/>
-								</Button.RenderTransform>
-								<Button.ContentTemplate>
-									<DataTemplate>
-										<PathIcon Width="14" Height="14" Data="M22 11H17V6H14V11H10V3H7V11H1.8V13H7V21H10V13H14V18H17V13H22V11Z"/>
-									</DataTemplate>
-								</Button.ContentTemplate>
-							</Button>
-							<Button
-							 CornerRadius="0 6 6 0" Padding="13 8">
-							
-								<Button.ContentTemplate>
-									<DataTemplate>
-										<PathIcon Width="14" Height="14" Data="M22 11H17V6H14V11H10V3H7V11H1.8V13H7V21H10V13H14V18H17V13H22V11Z"/>
-									</DataTemplate>
-								</Button.ContentTemplate>
-							</Button>
+						<Button.ContentTemplate>
+							<DataTemplate>
+								<Viewbox Width="12" Height="12">
+									<Path Data="M 70,0 L 50,0 Q 15,0 0,50 M 0,0 L 20,0 Q 55,0 70,50" Stroke="White" StrokeThickness="6"/>
+								</Viewbox>
+							</DataTemplate>
+						</Button.ContentTemplate>
+					</Button>
+					<Button
+					CornerRadius="0 6 6 0" Padding="13 8">
+
+						<Button.ContentTemplate>
+							<DataTemplate>
+								<Viewbox Width="12" Height="12">
+									<Path Data="M 0,0 L 20,0 Q 55,0 70,50" Stroke="White" StrokeThickness="6"/>
+								</Viewbox>
+							</DataTemplate>
+						</Button.ContentTemplate>
+					</Button>
+
+					<Button Margin="5 0 0 0"
+
+							CornerRadius="6 0 0 6" Padding="13 8">
+
+						<Button.ContentTemplate>
+							<DataTemplate>
+								<PathIcon Width="14" Height="14" Data="M15,16H19V18H15V16M15,8H22V10H15V8M15,12H21V14H15V12M11,10V18H5V10H11M13,8H3V18A2,2 0 0,0 5,20H11A2,2 0 0,0 13,18V8M14,5H11L10,4H6L5,5H2V7H14V5Z"/>
+							</DataTemplate>
+						</Button.ContentTemplate>
+					</Button>
+					<Button
+					CornerRadius="0" Padding="13 8">
+
+						<Button.RenderTransform>
+							<RotateTransform Angle="180"/>
+						</Button.RenderTransform>
+						<Button.ContentTemplate>
+							<DataTemplate>
+								<PathIcon Width="14" Height="14" Data="M22 11H17V6H14V11H10V3H7V11H1.8V13H7V21H10V13H14V18H17V13H22V11Z"/>
+							</DataTemplate>
+						</Button.ContentTemplate>
+					</Button>
+					<Button
+					CornerRadius="0 6 6 0" Padding="13 8">
+
+						<Button.ContentTemplate>
+							<DataTemplate>
+								<PathIcon Width="14" Height="14" Data="M22 11H17V6H14V11H10V3H7V11H1.8V13H7V21H10V13H14V18H17V13H22V11Z"/>
+							</DataTemplate>
+						</Button.ContentTemplate>
+					</Button>
+				</StackPanel>
+
+
+
+				<Grid Grid.Column="0" Grid.Row="1">
+					<ScrollViewer VerticalAlignment="Top"
+								  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+						<StackPanel Name="panel">
+							<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
+							<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
+							<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
+							<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
+							<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
+							<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
 						</StackPanel>
-
-					</Grid>
-				</Border>
+					</ScrollViewer>
 
 
-				<Grid ColumnDefinitions="auto *" RowDefinitions="auto *" Grid.Column="0" Grid.Row="1" Background="#151517" ClipToBounds="True">
-
-
-					<Grid Grid.Column="1" Grid.Row="1" >
-						<ScrollViewer x:Name="trackScrollViewer" VerticalAlignment="Top"
-									  HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
-							<StackPanel Name="panel">
-								<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
-								<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
-									<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
-								<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
-									<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
-								<ctrls:TestControl Height="200" HorizontalAlignment="Stretch"></ctrls:TestControl>
-							</StackPanel>
-						</ScrollViewer>
-
-
-						<vc:PlayPointer x:Name="playPointer"
-										IsHitTestVisible="False"
-										HorizontalAlignment="Left" Width="21" Margin="290 -29 0 0"/>
-						
-					</Grid>
+					<vc:PlayPointer x:Name="playPointer"
+									IsHitTestVisible="False"
+									HorizontalAlignment="Left" Width="21" Margin="290 -29 0 0"/>
 
 				</Grid>
 
-				
 
 			</Grid>
 
