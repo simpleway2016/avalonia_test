@@ -1,25 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-	  <OutputType Condition="'$(OS)' == 'Windows_NT'">WinExe</OutputType>
-	  <OutputType Condition="'$(OS)' != 'Windows_NT'">Exe</OutputType>
-	  <TargetFramework Condition="'$(OS)' == 'Windows_NT'">net10.0-windows</TargetFramework>
-	  <TargetFramework Condition="'$(OS)' != 'Windows_NT'">net10.0-macos</TargetFramework>
+	  <OutputType>WinExe</OutputType>
+	  <TargetFramework>net10.0</TargetFramework>
 	  <Nullable>enable</Nullable>
-	  <!-- Recommended Avalonia trimming settings for Native AOT -->
-	  <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
 	  <allowUnsafeBlocks>true</allowUnsafeBlocks>
     <ApplicationManifest>app.manifest</ApplicationManifest>
 	  <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-	  <CETCompat>false</CETCompat>
-	  <!-- 设置为false，禁用CET特性，防止有些dll出现栈溢出问题 -->
-  </PropertyGroup>
-	<ItemGroup>
-		<!-- 
-		增加连接器选项 https://learn.microsoft.com/en-us/dotnet/core/deploying/native-aot/interop
-		/DYNAMICBASE:NO 禁止基地址随机，480混响不禁止这个，运行不了 -->
-		<LinkerArg Include="/DYNAMICBASE:NO" Condition="'$(OS)' == 'Windows_NT'" />
 
-	</ItemGroup>
+  </PropertyGroup>
+
   <ItemGroup>
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
