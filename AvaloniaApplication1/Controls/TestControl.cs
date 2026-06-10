@@ -15,6 +15,7 @@ namespace AvaloniaApplication1.Controls
     {
         int _currentFps;
         private int _frameCount = 0;
+        public int Fps => _currentFps;
         private readonly Stopwatch _stopwatch = new();
         public TestControl()
         {

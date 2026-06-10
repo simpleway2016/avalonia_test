@@ -112,7 +112,7 @@
 							</StackPanel>
 						</Border>
 						<!--液晶-->
-						<TextBlock Name="txt2" FontSize="17" Width="130" Height="60" Margin="10 0" />
+						<TextBlock Name="txt2" FontSize="17" Width="230" Height="60" Margin="10 0" />
 
 
 
