@@ -1,5 +1,6 @@
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using AvaloniaApplication1.Controls;
 using System;
@@ -14,9 +15,16 @@ public partial class TestWindow : Window
         InitializeComponent();
     }
 
+    protected override void OnLoaded(RoutedEventArgs e)
+    {
+        base.OnLoaded(e);
+
+        start();
+    }
+
     private void btnRun_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        start();
+       
     }
 
     async void start()
