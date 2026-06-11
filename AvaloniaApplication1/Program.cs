@@ -1,4 +1,5 @@
 ﻿using Avalonia;
+using Avalonia.Rendering.Composition;
 using System;
 
 namespace AvaloniaApplication1
@@ -17,6 +18,10 @@ namespace AvaloniaApplication1
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
                 .WithInterFont()
+            .With(new CompositionOptions()
+            {
+                UseRegionDirtyRectClipping = false
+            })
                 .LogToTrace( );
     }
 }
