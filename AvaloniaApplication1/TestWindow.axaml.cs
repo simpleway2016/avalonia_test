@@ -31,7 +31,7 @@ public partial class TestWindow : Window
     {
         while(true)
         {
-            await Task.Delay(1);
+            await Task.Delay(20);
             txt2.Text =$"FPS:{((TestControl)panel.Children[0]).Fps} {DateTime.Now.ToString("hh:mm:ss.fff")}"; 
         
             if(playPointer.Margin.Left > 400)

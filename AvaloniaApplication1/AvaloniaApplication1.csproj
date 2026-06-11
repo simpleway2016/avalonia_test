@@ -6,8 +6,12 @@
 	  <allowUnsafeBlocks>true</allowUnsafeBlocks>
 	  <ApplicationManifest>app.manifest</ApplicationManifest>
 	  <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+	
   </PropertyGroup>
-
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<TrimMode>link</TrimMode>
+		<PublishAot>true</PublishAot>
+	</PropertyGroup>
   <ItemGroup>
     <Folder Include="Models\" />
     <AvaloniaResource Include="Assets\**" />
